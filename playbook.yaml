@@ -11,7 +11,8 @@
     tasks:
        - name: Run Apt Update
          shell: apt update && apt install -y python3-apt
-
+         become: yes
+        
        - name: Install Nginx Server
          apt: >
            name=nginx
